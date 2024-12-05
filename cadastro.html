@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SenaCar</title>
+</head>
+<body>
+    <div class="menu-superior">
+        <nav>
+            <div class="logo">
+                <a href="home.html"> 
+                    <img src="https://spfw.com.br/wp-content/uploads/2022/05/logo-senac-e1654026051978-580x386.png" alt="" class="logo-senac"> 
+                </a>
+            </div>
+    
+            <ul>
+                <li> <a href="home.html"> Home </a> </li>
+                <li> <a href="cadastro.html"> Cadastrar Viagem </a> </li>
+                <li> <a href="viagensrealizadas.html"> Viagens Realizadas</a> </li>
+                <!-- <li> <a href="#"> Serviços </a> </li>
+                <li> <a href="#"> Contacto </a> </li> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="cadastro-viagem">
+        <!-- Aqui seria uma condição se a viagem já foi realizada ou se está iniciando agora -->
+
+        <div class="status-viagem">
+            <label for="text" class="text-status">Qual o status da viagem você deseja registrar?</label>
+            <div class="status">
+                <a href="" class="nao-realizada">À realizar</a>
+                <a href="" class="realizada">Realizada</a>
+            </div>
+        </div>
+
+        <div class="info-cadastro-viagem">
+            <h3>
+                Informações sobre a viagem:
+            </h3>
+            <div class="data-hora-posse-devolucao">
+                <div class="date-inicial">
+                    <label for="data">Informe a data inicial e hora da posse do veículo:</label>
+                    <input type="datetime-local" id="datainicial" name="datainicial" class="datainicial">
+                </div>
+                <br>
+                <div class="date-final">
+                    <label for="data">Informe a data de devolção e hora do veículo ao SENAC:</label>
+                    <input type="datetime-local" id="datafinal" name="datafinal" class="datafinal">
+                </div>
+                
+                
+            </div>
+                <label for="text">Informe o destino:</label>
+                <input type="text" name="destino" id="destino" placeholder="Destino">
+                <label for="text">Informe o KM inicial (mostrada no painel):</label>
+                <input type="number" name="kmInicial" id="kmInicial">              
+                <label for="text">Informe o KM final (mostrada no painel):</label>
+                <input type="number" name="kmfinal" id="kmfinal">             
+
+            <h3>
+                Informações sobre do motorista 
+                <br>
+                (esponsável):
+            </h3>
+            <form action="/action_page.php">
+                <label for="text">Informe seu nome:</label>
+                <br>
+                <input type="text" placeholder="Nome">
+                <br>
+                <label for="text">Informe sua matrícula:</label>
+                <input type="number" placeholder="Matrícula">
+                <br>
+                <label for="text">Informe seu setor:</label>
+                <div class="setores-senac">
+                    <input type="radio" id="comercial" name="fav_language" value="comercial">
+                    <label for="comercial">Comercial</label>
+                    <input type="radio" id="cat" name="fav_language" value="CAT">
+                    <label for="cat">CAT</label>
+                    <input type="radio" id="administrativo" name="fav_language" value="Administrativo">
+                    <label for="administrativo">Administrativo</label>
+                    <input type="radio" id="pedagogico" name="fav_language" value="pedagogico">
+                    <label for="pedagogico">Pedagogico</label>
+                </div>
+              
+              </form>
+
+            <h3>
+                Informações gerais:
+            </h3>
+            <label for="finalidade">
+                Informe a finalidade para qual o veículo será utilizado.
+                <br>
+                Se necessário, insira detalhes e menções a outros colaboradores.
+            </label>
+            <input type="text"  placeholder="Finalidade">
+            <br>
+            <label for="uploads">
+                Insira uma imagem do painel do veículo, mostrando com nitidez a quilometragem do marcador.
+            </label>
+            <input type="file" id="quilometragemInicial">
+            <br>
+            <button type="submit" class="salvar">Salvar</button>
+
+        </div>
+        
+    </div>
+</body>
+</html>
